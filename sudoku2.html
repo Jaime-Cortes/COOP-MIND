@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" media="all" type="text/css" href="CSS/sudoku2css.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/barranav.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .sudoku-board-cell input {
+            background: none;
+            font-size: 16px;
+        }
+
+        .wrap {
+            padding: 2em 1em;
+            width: 582px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media(min-width: 30em) {
+            .sudoku-board .candidates {
+                font-size: .8em;
+            }
+        }
+
+        [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(16n+1) {
+            border-left-width: 2px;
+            border-left-color: #808080;
+        }
+
+        [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+16) {
+            border-top-width: 2px;
+            border-top-color: #808080;
+        }
+
+        [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(4n) {
+            border-right-width: 2px;
+            border-right-color: #808080;
+        }
+
+        [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+49):nth-of-type(-n+64),
+        [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+113):nth-of-type(-n+128),
+        [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+177):nth-of-type(-n+192),
+        [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+241):nth-of-type(-n+265) {
+            border-bottom-width: 2px;
+            border-bottom-color: #808080;
+        }
+    </style>
+
+    <title>Sudoku2J</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="JS/sudoku2JS.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img id="logo" src="img/Logo.png" alt="" srcset="" width="250px">
+        </div>
+        <div id="links" class="enlaces">
+            <p>COOP MIND</p>
+            <ul>
+                <li><a href="h.html">Home</a></li>
+                <li><a href="consejos.html">Consejos</a></li>
+                <li><a href="instSudoku2.html">Cooperativo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrap">
+        <h1 class="page_title">SUDOKU 2 JUGADORES</h1>
+        <div id="game_over_text" class="overlay_text">
+            ¡¡Se acabó el tiempo!!
+            <span class="overlay_text_small">Inténtalo otra vez</span>
+        </div>
+        <div id="win_text" class="overlay_text">
+            ¡Ganaste!
+        </div>
+        <div class="game_container">
+            <div class="game_info_container">
+                <div class="game_info">
+                    <span id="time">0</span>
+                    <span id="stop"></span>
+                </div>
+            </div>
+        </div>
+
+        <button id="nuevo2" class="buttons" name="b1" onclick="actions(this)">Repetir</button>
+        <button id="nuevo" class="buttons" name="b1" onclick="actions(this)">Comprobar</button>
+        <div id="sudoku" class="sudoku-board">
+        </div>
+        <!--the only required html-->
+        <div id="sudoku" class="sudoku-board">
+        </div>
+
+        <!--solve buttons-->
+    </div>
+
+    <script>function retryForever (fn) {
+      try {
+        return fn()
+      } catch (err) {
+        console.log('retry...')
+        return retryForever(fn)
+      }
+    }
+    function tryGeneratingBoard () {
+      var mySudokuJS = $("#sudoku").sudokuJS({
+  			boardSize: 16
+  		});
+
+  		$(".js-solve-step-btn").on("click", mySudokuJS.solveStep);
+  		$(".js-solve-all-btn").on("click", mySudokuJS.solveAll);
+    }
+    retryForever(tryGeneratingBoard)</script>
+</body>
+</html>

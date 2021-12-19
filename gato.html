@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gato</title>
+    <link rel="stylesheet" href="CSS/botones.css">
+    <link rel="stylesheet" href="CSS/memoramajuego.css">
+    <link rel="stylesheet" href="CSS/gato.css">
+    <link rel="stylesheet" href="CSS/barranav.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img id="logo" src="img/Logo.png" alt="" srcset="" width="250px">
+        </div>
+        <div id="links" class="enlaces">
+            <ul>
+                <li><a href="h.html">Home</a></li>
+                <li><a href="consejos.html">Consejos</a></li>
+                <li><a href="instSudoku2.html">Cooperativo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="overlay_text visible">
+        <h1>Da click para empezar</h1>
+    </div>
+    <div id="win_text" class="overlay_text">
+        <h1 class="titulo_victoria">Ganaste</h1>
+        <button id="nuevo" class="botonp juegogato">Jugar de nuevo</button>
+    </div>
+    <div id="empate_text" class="overlay_text">
+        <h1 class="titulo_victoria">Empate</h1>
+        <button id="nuevo2" class="botonp juegogato">Jugar de nuevo</button>
+    </div>
+
+    <div id="masterDiv">
+        <h1>¿Puedes contra tu contrincante?</h1><br><br>
+         <div>
+            <button id="b11" class="buttons" name="b1" onclick="actions(this)">1</button>
+            <button id="b12" class="buttons" name="b2" onclick="actions(this)">2</button>
+            <button id="b13" class="buttons" name="b3" onclick="actions(this)">3</button>
+         </div>
+         <div>
+            <button id="b21" class="buttons" name="b4" onclick="actions(this)">4</button>
+            <button id="b22" class="buttons" name="b5" onclick="actions(this)">5</button>
+            <button id="b23" class="buttons" name="b6" onclick="actions(this)">6</button>
+         </div>
+         <div>
+            <button id="b31" class="buttons" name="b7" onclick="actions(this)">7</button>
+            <button id="b32" class="buttons" name="b8" onclick="actions(this)">8</button>
+            <button id="b33" class="buttons" name="b9" onclick="actions(this)">9</button>
+         </div>
+    </div>
+    <script src="JS/gato.js"></script>
+    <script src="JS/script.js"></script>
+
+</body>
+</html> 

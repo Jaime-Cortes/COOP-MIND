@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numeros</title>
+  <!-- <link rel="stylesheet" href="/Prototipo/CSS/style.css"> Laptop -->
+  <link rel="stylesheet" href="CSS/styleR.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet" />   
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet" />  
+</head>
+<body>
+  <nav>
+    <div class="logo">
+    <img src="/img/Logo.png" alt="" srcset="" width="250px" />
+      </div>
+        <p>Bienvenido a COOP MIND</p>
+        <div class="enlaces">
+          <ul>
+            <a href="/index">Home</a>
+            <a>Retos</a>
+            <a href="/html/h.html">Cooperativo</a>
+            <a href="/login">Acerca de Nosotros</a>
+            <a href="/register">Registro</a>
+            </ul>
+        </div>
+  </nav>
+  
+  <div class="row">
+    <div class="col-xs-6">
+    </div>
+    <div class="col-xs-3" align="center">
+      <h2>Score: <lbl id="score">0</lbl></h2>   
+    </div>
+    <div class="col-xs-3">
+      <br><br><br><br>
+      <div class="cronometro" align="center">
+        <div id="hms">     
+        </div>                    
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="row">
+        <h2 align="center">INSTRUCCIONES</h2>
+        <p align="center">Selecciona de manera ascendente los numeros que se muestras en la siguiente cuadricula</p>
+      </div>
+      <div class="row">
+        <h2 align="center">EJERCICIOS MENTALES</h2>
+        <p align="center">Los juegos mentales pueden ayudar a evaluar y entrenar tu mente, tu cerebro y sus habilidades cognitivas. Aprovechando las últimas investigaciones sobre la neuroplasticidad, CogniFit ha desarrollado entrenamientos cerebrales específicos para las diferentes habilidades cognitivas que usamos en nuestra vida cotidiana. A través de la plataforma online de CogniFit tendrás acceso a un gran número de juegos y podrás seleccionar diferentes ejercicios de entrenamiento que se ajusten a tus necesidades particulares.</p>
+      </div>
+    </div>
+    <div class="col-xs-6" align="center">
+      <br><br>
+      <table align="center" id="tablaMatriz">
+                 
+      </table>
+      <br>
+      <a class="btn2 btn-lg" id="siguiente">
+       <span>Siguiente</span>
+      </a>
+      <a class="btn2 btn-lg" id="finalizar">
+       <span>Finalizar</span>
+      </a>
+    </div>
+  </div>
+  <br>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- SCRIPTS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="JS/numerosR.js"></script>
+        <script src="JS/jquery.js"></script>   
+        <script type="text/javascript">
+
+          jQuery(function ($) {   
+                
+                var puntuacion = 0;
+                var level = 1;
+
+                $('#hms').html("00:00:00"); 
+
+
+                nivel(level);
+
+                $('#finalizar').on('click', function(){
+                    parar();
+                });
+
+                $('#siguiente').on('click', function(){
+                    level++;
+                    nivel(level);
+                });
+
+                
+
+          });
+
+        </script>
+
+</body>
+</html>

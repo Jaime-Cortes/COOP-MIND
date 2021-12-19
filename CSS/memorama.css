@@ -1,0 +1,32 @@
+
+
+ .contenedor{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,700px));
+   justify-content: center;
+   align-content: center;
+  /* margin: auto; */
+  min-height: 70vh;
+}
+
+.imagen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen img{
+  width: 80%;
+}
+a{
+  margin-top: 20px;
+  width: max-content;
+  display: inline;
+}
+/* Color del fondo */
+#jugar:hover{background-color: rgb(131, 107, 185);
+color: aliceblue;}
+/* Color del borde */
+#jugar::before{border: 4px solid rgb(163, 0, 227);}
+/* Color del aniñño */
+#jugar::after{border: 4px solid rgb(210, 114, 175);}

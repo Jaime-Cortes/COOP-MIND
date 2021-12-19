@@ -1,0 +1,174 @@
+*{
+    text-decoration: none;
+    font-family: 'Zen Kaku Gothic New';
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Rubik';
+}
+html{
+    min-height: 100vh;
+}
+body{
+    margin: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(254,216,162,1) 68%, rgba(252,176,69,1) 100%);}
+
+.page_title{
+    color: rgb(255, 145, 0);
+    -webkit-text-stroke: 0.5px black;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.game_info_container{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.game_info{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.game_container{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 10px;
+    justify-content: center;
+    perspective: 500px;
+}
+.card{
+    height: 175px;
+    width: 125px;
+    position: relative;
+}
+
+.card_face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 500ms ease-in;
+}
+
+.card.visible .card_back{
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card_front{
+    transform: rotateY(0);
+}
+
+
+/* SE HACE CON JAVASCRIPT */
+/* .card:hover .card_back{
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card_front{
+    transform: rotateY(0);
+} */
+
+.card_face img{
+    width: 100%;
+}
+
+.card_back{
+    background-color: rgb(251, 251, 251);
+    border-color: rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.card_front{
+    border: 2px solid rgb(255, 72, 0);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card_front img{
+    width: 130%;
+}
+.card_value{
+    transform: scale(.8);
+    transition: transform 100ms ease-in-out;
+}
+
+.card_front:hover .card_value{
+    transform: scale(0.6);
+}
+
+.overlay_text{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: azure;
+    font-family: 'Rubik';
+    font-size: 4rem;
+}
+
+.overlay_text.visible{
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+    flex-direction: column;
+}
+
+.overlay_text_small{
+    font-weight: 800;
+    font-size: 30px;
+}
+
+
+
+@keyframes overlay-grow{
+    from{
+        background: rgb(0, 0, 0);
+        font-size: 0;
+    }
+    to{
+        background: #020202a5;
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 600px){
+    .game_container{
+        grid-template-columns: repeat(2,auto);
+    }
+    .game_info_container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.card.matched .card_value {
+    animation: dance 1s linear infinite 500ms;
+  }
+
+  @keyframes dance {
+    0%, 100%  {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-30deg);
+    }
+    75% {
+      transform: rotate(30deg);
+    }
+  }
+

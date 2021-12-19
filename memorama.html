@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/memoramajuego.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/barranav.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img id="logo" src="img/Logo.png" alt="" srcset="" width="250px">
+        </div>
+        <div id="links" class="enlaces">
+            <p>COOP MIND</p>
+            <ul>
+                <li><a href="h.html">Home</a></li>
+                <li><a href="consejos.html">Consejos</a></li>
+                <li><a href="instSudoku2.html">Cooperativo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="page_title">Memorama, Prueba tu Habilidad</h1>
+    <div class="overlay_text visible">
+        Click to Start
+    </div>
+    <div id="game_over_text" class="overlay_text">
+        Game Over
+        <span class="overlay_text_small">Start again</span>
+    </div>
+    <div id="win_text" class="overlay_text">
+        You won
+        <span class="overlay_text_small">Start again</span>
+    </div>
+    <div class="game_container">
+        <div class="game_info_container">
+            <div class="game_info">
+                Tiempo<span id="time-remaining">100</span>
+            </div>
+            <div class="game_info">
+                Giros Realizados <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen1.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen1.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen2.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen2.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen4.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen4.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen3.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen5.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen5.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen6.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen6.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen7.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen7.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen8.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen8.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_back card_face">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="card_front card_face">
+                <img class="card_value" src="img/imagen3.png" alt="">
+            </div>
+        </div>
+        
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>

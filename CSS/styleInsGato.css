@@ -1,0 +1,324 @@
+x-ms-webview@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+*{
+	margin: 0;
+	font-family: "Zen Kaku Gothic New", sans-serif;
+	text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  font-family: "Rubik", sans-serif;
+}
+
+p,
+a,
+li {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+#maestro{
+
+	min-height: calc(100vh - 150px);
+
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+}
+
+#titulo{
+
+	text-align: center;
+	margin: 0 auto 2% auto;
+	font-size: 40pt;
+}
+
+#mainDiv{
+	display: flex;
+	align-items: center;
+	margin: 2% 10%;
+
+	max-height: 400px;
+}
+
+.divisores{
+
+	width: 50%;
+}
+
+#instrucciones{
+
+	font-size: 165%;
+}
+
+/* Dar esta clase al Boton */
+.botonp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    min-height: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: white;
+    border: none;
+    border-radius: 1000px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: background-color 1s ease-in-out;
+    text-align: center;
+    margin: 4% auto;
+    }
+
+  .botonp::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(200px + 12px);
+    min-height: calc(50px + 12px);
+    border: 4px solid #ffa600;
+    box-shadow: 0 0 60px rgba(255, 221, 0, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+.botonp::after{
+    content: ' ';
+    opacity: 1;
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Color del fondo */
+#default:hover{background-color: rgb(141, 95, 248);}
+/* Color del borde */
+#default::before{border: 4px solid rgb(136, 248, 95);}
+/* Color del aniñño */
+#default::after{border: 4px solid rgb(248, 195, 95);}
+
+.botonp:hover, .botonp:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  .botonp:hover::before, .botonp:focus::before {
+    opacity: 1;
+  }
+  .botonp:hover::after, .botonp:focus::after {
+    opacity: 0;
+    animation: none;
+  }
+
+.tictactoe, .win{
+
+	text-align: center;
+	color: transparent;
+}
+
+.tictactoe span{
+
+	display: inline-block;
+
+	line-height: 100px;
+
+	margin: 0 -3px 0 -3px;
+
+	width: 100px;
+
+	height: 100px;
+
+	border: solid 3px rgba(0,0,0,.5);
+
+	font-size: 100px;
+
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+#x1 { 
+	border-top: none; border-left: none;
+    -webkit-animation-name: tictactoe-0;
+	-webkit-animation-delay: 4s;    
+}
+
+#x2 {
+
+    border-top: none; 
+}
+
+#x3 { 
+	border-top: none; border-right: none; 
+    -webkit-animation-name: tictactoe-X;
+	-webkit-animation-delay: 1s;
+}
+
+#x4 { 
+
+	border-left: none;
+}
+
+#x5 { 
+
+    -webkit-animation-name: tictactoe-0;
+	-webkit-animation-delay: 2s;
+}
+
+#x6 { 
+
+	border-right: none; 
+    -webkit-animation-name: tictactoe-X;
+	-webkit-animation-delay: 7s;
+}
+
+#x7 {
+
+  	border-bottom: none; border-left: none; 
+    -webkit-animation-name: tictactoe-X;
+	-webkit-animation-delay: 3s;
+}
+
+#x8 { 
+	border-bottom: none;
+    -webkit-animation-name: tictactoe-0;
+	-webkit-animation-delay: 6s;
+}
+
+#x9 { 
+	border-bottom: none; border-right: none;
+    -webkit-animation-name: tictactoe-X;
+	-webkit-animation-delay: 5s;
+}
+
+@-webkit-keyframes tictactoe-X {
+   	from { color: transparent; }
+	to { color: red; }
+}
+
+@keyframes tictactoe-X {
+   	from { color: transparent; }
+	to { color: red; }
+}
+
+@-webkit-keyframes tictactoe-0 {
+   	from { color: transparent; }
+	to { color: blue; }
+}
+
+@keyframes tictactoe-0 {
+   	from { color: transparent; }
+	to { color: blue; }
+}
+
+
+@media (max-width: 850px) {
+
+	#maestro{
+
+		min-height: 0;
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	#titulo{
+
+		text-align: center;
+		margin: 2% 0;
+		font-size: 30px;
+	}
+
+	#mainDiv{
+
+		display: flex;
+		flex-direction: column;
+
+		margin: 5% 10%;
+
+		max-height: 100%;
+	}
+
+	.divisores{
+
+		height: 50%;
+		width: auto;
+
+		margin: 2% 0;
+	}
+
+	#instrucciones{
+		font-family: "Zen Kaku Gothic New", sans-serif;
+
+		font-size: 150%;
+		text-align: justify;
+	}
+
+	#botonPlay{
+
+		display: block;
+
+		margin: 0 auto;
+		padding: 1% 4%;
+
+		color: black;
+		font-size: 150%;
+
+		border-color: rgba(0, 0, 0, 0);
+		border-radius: 20px;
+
+		background-color: red;
+	}
+}
+
+@media (max-width: 400px) {
+
+	.tictactoe, .win{
+
+		text-align: center;
+		color: rgba(0, 0, 0, 0);
+	}
+
+	.tictactoe span{
+
+		display: inline-block;
+
+		line-height: 80px;
+
+		margin: 0 -3px;
+
+		width: 80px;
+
+		height: 80px;
+
+		border: solid 3px rgba(0,0,0,.5);
+
+		font-size: 80px;
+
+		-webkit-animation-duration: 1s;
+		-webkit-animation-fill-mode: forwards;
+	}
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rubik", sans-serif;
+}
+
+p,
+a,
+li {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}

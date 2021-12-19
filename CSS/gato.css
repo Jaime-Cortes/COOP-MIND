@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+*{
+    margin: 0;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  font-family: "Rubik", sans-serif;
+}
+
+p,
+a,
+li {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+body{
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(162, 214, 254) 68%, rgb(0, 53, 166) 100%);
+    padding-bottom: 0.55%;
+}
+
+#masterDiv{
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: calc(100vh - 150px);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+
+    display: inline-block;
+    margin: 0 -3px;
+    width: 200px;
+    height: 200px;
+    font-size: 150px;
+    background-color: transparent;
+    color: transparent;
+    border: rgb(8, 183, 231) solid 6px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.buttons:hover{
+
+    background-color: rgb(93, 153, 255);
+}
+
+.clicked:disabled{
+
+    display: inline-block;
+    margin: 0 -3px;
+    width: 200px;
+    height: 200px;
+    font-size: 150px;
+    background-color: transparent;
+    /* border-color: black; */
+    border: rgb(8, 183, 231) solid 6px;
+}
+
+#b11 { 
+    border-top: none; 
+    border-left: none;
+}
+
+#b12 {
+    border-top: none; 
+}
+
+#b13 { 
+    border-top: none; 
+    border-right: none;
+}
+
+#b21 { 
+    border-left: none;
+}
+
+#b23 { 
+    border-right: none; 
+}
+
+#b31 {
+    border-bottom: none;
+    border-left: none; 
+}
+
+#b32 { 
+    border-bottom: none;
+}
+
+#b33 { 
+    border-bottom: none;
+    border-right: none;
+}
+
+@media (max-width: 800px) {
+
+    #masterDiv{
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: calc(100vh - 200px);
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons{
+
+        display: inline-block;
+        margin: 0 -3px;
+
+        width: 150px;
+        height: 150px;
+
+        font-size: 100px;
+        background-color: transparent;
+        color: transparent;
+
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    .buttons:hover{
+
+        background-color: rgb(93, 153, 255);
+    }
+
+    .clicked:disabled{
+
+        width: 150px;
+        height: 150px;
+        
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    #masterDiv{
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: calc(100vh - 200px);
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons{
+
+        display: inline-block;
+        margin: 0 -3px;
+
+        width: 130px;
+        height: 130px;
+
+        font-size: 100px;
+        background-color: white;
+        color: transparent;
+
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    .buttons:hover{
+
+        background-color: darkred;
+    }
+
+    .clicked:disabled{
+
+        width: 130px;
+        height: 130px;
+
+        font-size: 100px;
+    }
+}
+
+.titulo_victoria{
+    transform: translateY(2em);
+}

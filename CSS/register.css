@@ -1,0 +1,63 @@
+*{
+    text-decoration: none;
+    font-family: 'Zen Kaku Gothic New';
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    align-content: center;
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #47c0e2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #40bfd2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.cajagrande{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    height: min-content;
+    border-radius: 30px;
+    filter: drop-shadow(20px 10px 30px black);
+    padding: 70px 0px;
+    flex-shrink: 0;
+}
+
+.elements{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.elements input{
+    margin: 10px 0px;
+    background: none;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 3px black;
+}
+
+label{
+    transform: translateY(-40px);
+    transition: 0.5s ease-in-out ;
+}
+
+.elements input:focus + label,
+input:valid + label{
+    /* visibility: hidden; */
+    transform: translateY(-80px);
+}
